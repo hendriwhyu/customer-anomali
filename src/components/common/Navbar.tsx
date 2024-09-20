@@ -61,7 +61,7 @@ function Navbar() {
   const [user, setUser] = React.useState<User | null>(null);
 
   return (
-    <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6 bg-white">
+    <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6 bg-white z-[999]">
       <nav className="flex items-center justify-between w-full">
         {/* Logo dan Search Bar */}
         <div className="flex items-center gap-8">

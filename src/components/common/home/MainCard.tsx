@@ -7,7 +7,7 @@ function MainCard() {
     <div className="py-4">
       <div className="flex min-h-[480px] px-4 md:px-6 lg:px-8 pb-6 gap-4 lg:gap-8 justify-end flex-col self-stretch rounded-xl bg-[url('/src/assets/main-card-image.jpg')] bg-cover bg-center">
         <div className="flex flex-col items-start gap-2 text-black">
-          <h3 className="font-black text-5xl">
+          <h3 className="font-black text-3xl">
             Explore our branded collections
           </h3>
           <h4 className="text-base">
