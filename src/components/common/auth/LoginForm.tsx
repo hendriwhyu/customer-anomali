@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import useInput from '../../hooks/useInput';
+import useInput from '../../../hooks/useInput';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -44,7 +44,7 @@ function LoginForm() {
             <div className="flex items-center">
               <Label htmlFor="password">Password</Label>
               <Link to="#" className="ml-auto inline-block text-sm underline">
-                  Forgot your password?
+                Forgot your password?
               </Link>
             </div>
             <Input id="password" type="password" required />
@@ -56,7 +56,7 @@ function LoginForm() {
         <div className="mt-4 text-center text-sm">
           Don&apos;t have an account?{' '}
           <Link to="/register" className="underline">
-              Sign up
+            Sign up
           </Link>
         </div>
       </CardContent>

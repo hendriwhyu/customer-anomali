@@ -1,12 +1,13 @@
-import MainLayout from '@/components/layout/MainLayout'
 import React from 'react'
+import MainLayout from '@/components/layout/MainLayout'
 import PageContainer from '../components/layout/PageContainer';
+import MainCard from '../components/common/home/MainCard';
 
 function HomePage() {
   return (
     <MainLayout>
         <PageContainer>
-            <h1>Home Page</h1>
+            <MainCard />
         </PageContainer>
     </MainLayout>
   )

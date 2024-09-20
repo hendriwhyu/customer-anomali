@@ -39,19 +39,21 @@ function UserDropdown() {
 
 function CartButton({ itemCount = 0 }) {
   return (
-    <Button variant="outline" size="icon" className="relative">
-      <ShoppingCart className="h-5 w-5" />
-      <span className="sr-only">View Cart</span>
+    <Link to="#">
+      <Button variant="outline" size="icon" className="relative">
+        <ShoppingCart className="h-5 w-5" />
+        <span className="sr-only">View Cart</span>
 
-      {/* Badge for notification */}
-      {itemCount > 0 && (
-        <Badge
-          variant="secondary"
-          className="absolute -top-2 -right-2 h-5 w-5 rounded-full p-0 justify-center bg-black text-white">
-          {itemCount}
-        </Badge>
-      )}
-    </Button>
+        {/* Badge for notification */}
+        {itemCount > 0 && (
+          <Badge
+            variant="secondary"
+            className="absolute -top-2 -right-2 h-5 w-5 rounded-full p-0 justify-center bg-black text-white">
+            {itemCount}
+          </Badge>
+        )}
+      </Button>
+    </Link>
   );
 }
 
@@ -59,7 +61,7 @@ function Navbar() {
   const [user, setUser] = React.useState<User | null>(null);
 
   return (
-    <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
+    <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6 bg-white">
       <nav className="flex items-center justify-between w-full">
         {/* Logo dan Search Bar */}
         <div className="flex items-center gap-8">
@@ -106,11 +108,13 @@ function Navbar() {
 
           {/* Sign In button hanya di desktop */}
           <div className="hidden md:flex gap-2">
-            <Button>Sign In</Button>
+            <Link to="/login">
+              <Button>Sign In</Button>
+            </Link>
           </div>
 
           {/* User Dropdown atau Cart Button, tetap terlihat di mobile */}
-          {user ? <UserDropdown /> : <CartButton itemCount={3} />}
+          {user ? <UserDropdown /> : <CartButton itemCount={0} />}
 
           {/* Mobile Menu (Hamburger) hanya untuk mobile */}
           <Sheet>
@@ -151,7 +155,6 @@ function Navbar() {
                   className="text-muted-foreground hover:text-foreground font-semibold">
                   Sign In
                 </Link>
-
               </nav>
             </SheetContent>
           </Sheet>
